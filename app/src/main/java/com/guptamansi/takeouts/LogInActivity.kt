@@ -2,27 +2,36 @@ package com.guptamansi.takeouts
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.guptamansi.takeouts.databinding.ActivityLogInBinding
 
-class Splash_Screen : AppCompatActivity() {
+class LogInActivity : AppCompatActivity() {
+
+    private val binding:ActivityLogInBinding by lazy {
+        ActivityLogInBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_splash_screen)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.splash_screen)) { v, insets ->
+        setContentView(binding.root)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        Handler().postDelayed({
-            val intent = Intent(this, LogInActivity::class.java)
+        binding.btnLogIn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        binding.tVSignUp.setOnClickListener{
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
             finish()
-        }, 5000)
+        }
     }
 }

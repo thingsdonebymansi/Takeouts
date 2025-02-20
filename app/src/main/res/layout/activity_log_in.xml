@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_green"
+    tools:context=".LogInActivity">
+
+    <TextView
+        android:id="@+id/tVLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/spicy_rice"
+        android:text="@string/tVLogIn"
+        android:textColor="@color/text_green"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/eTEmailOrPhoneNo"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/peralta"
+        android:hint="@string/eTEmailOrPhoneNo"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="@color/text_green"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tVLogIn" />
+
+    <EditText
+        android:id="@+id/eTPassword"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/peralta"
+        android:hint="@string/eTLogInPassword"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="@color/text_green"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTEmailOrPhoneNo" />
+
+    <TextView
+        android:id="@+id/tVFiller00LogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/peralta"
+        android:text="@string/tVFiller00InLogInActivity"
+        android:textAlignment="center"
+        android:textColor="@color/text_green"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTPassword" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/edittext_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tVFiller00LogIn">
+
+        <ImageView
+            android:id="@+id/iVGoogleLogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/iVGoogleLogo"
+            app:srcCompat="@drawable/google" />
+
+        <TextView
+            android:id="@+id/tVGoogleLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/spicy_rice"
+            android:text="@string/tVGoogleLogIn"
+            android:textColor="@color/text_green"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tVFiller00LogIn" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogIn"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/spicy_rice"
+        android:text="@string/btnLogIn"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/tVSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/peralta"
+        android:text="@string/tVSignUp"
+        android:textAlignment="center"
+        android:textColor="@color/text_green"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogIn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

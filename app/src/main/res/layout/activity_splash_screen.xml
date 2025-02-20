@@ -2,16 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/splash_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_green"
     tools:context=".Splash_Screen">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iVLogoSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/iVLogoSplash"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -19,4 +20,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/screenshot_from_2025_02_19_12_49_26_bg_removed_png" />
+
+    <TextView
+        android:id="@+id/tVSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amita_bold"
+        android:text="@string/tVSplash"
+        android:textAlignment="center"
+        android:textColor="@color/text_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/iVLogoSplash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iVLogoSplash" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

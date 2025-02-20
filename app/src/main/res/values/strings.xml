@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Takeouts</string>
+    <string name="tVSplash">We will feed you\nAnytime Anywhere</string>
+    <string name="iVLogoSplash">Logo of the app on the splash screen</string>
+    <string name="tVLogIn">Log In</string>
+    <string name="eTEmailOrPhoneNo">Email or Phone Number</string>"
+    <string name="eTLogInPassword">Password</string>
+    <string name="tVFiller00InLogInActivity">Or\nSign In with</string>
+    <string name="tVGoogleLogIn">Google</string>
+    <string name="btnLogIn">Log In</string>
+    <string name="iVGoogleLogo">Google Logo</string>
+    <string name="tVSignUp">Don\'t have an account?\nSign Up</string>
 </resources>

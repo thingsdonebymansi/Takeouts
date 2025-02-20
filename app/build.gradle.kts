@@ -7,6 +7,10 @@ android {
     namespace = "com.guptamansi.takeouts"
     compileSdk = 35
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.guptamansi.takeouts"
         minSdk = 24
