@@ -3,11 +3,19 @@
     <string name="tVSplash">We will feed you\nAnytime Anywhere</string>
     <string name="iVLogoSplash">Logo of the app on the splash screen</string>
     <string name="tVLogIn">Log In</string>
+    <string name="tVSignUp">Sign Up</string>
     <string name="eTEmailOrPhoneNo">Email or Phone Number</string>"
+    <string name="etNameSignUp">Name</string>
+    <string name="etEmailSignUp">Email</string>
+    <string name="etPhoneNoSignUp">Phone No</string>
+    <string name="etPasswordSignUp">Password</string>
     <string name="eTLogInPassword">Password</string>
     <string name="tVFiller00InLogInActivity">Or\nSign In with</string>
+    <string name="tVFiller00InSignUpActivity">Or\nCreate an account using</string>
     <string name="tVGoogleLogIn">Google</string>
     <string name="btnLogIn">Log In</string>
+    <string name="btnSignUp">Sign Up</string>
     <string name="iVGoogleLogo">Google Logo</string>
-    <string name="tVSignUp">Don\'t have an account?\nSign Up</string>
+    <string name="tVSignUpOption">Don\'t have an account?\nSign Up</string>
+    <string name="tVAlreadyHaveAnAc">Already have an account?</string>
 </resources>
