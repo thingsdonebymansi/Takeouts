@@ -14,8 +14,12 @@
     <string name="tVFiller00InSignUpActivity">Or\nCreate an account using</string>
     <string name="tVGoogleLogIn">Google</string>
     <string name="btnLogIn">Log In</string>
+    <string name="btnSetLocation"> Set Location </string>
     <string name="btnSignUp">Sign Up</string>
     <string name="iVGoogleLogo">Google Logo</string>
     <string name="tVSignUpOption">Don\'t have an account?\nSign Up</string>
     <string name="tVAlreadyHaveAnAc">Already have an account?</string>
+    <string name="tVChooseYourLocation">Choose Your Location</string>
+    <string name="autocomplete_tVChooseLocation">Choose Location</string>
+    <string name="tVWhyLocation">Please select your location,\n so that we can reach you.</string>
 </resources>
