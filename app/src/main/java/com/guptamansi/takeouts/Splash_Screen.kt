@@ -12,6 +12,10 @@ class Splash_Screen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+
+        getSupportActionBar()?.hide()
+
         setContentView(R.layout.activity_splash_screen)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.splash_screen)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
