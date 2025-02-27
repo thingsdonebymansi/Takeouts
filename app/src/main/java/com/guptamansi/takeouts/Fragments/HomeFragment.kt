@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.interfaces.ItemClickListener
+import com.denzcoskun.imageslider.models.SlideModel
 import com.guptamansi.takeouts.R
+import com.guptamansi.takeouts.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +27,8 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var binding: FragmentHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,7 +42,47 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+        //return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val imageList = ArrayList<SlideModel>() // Create image list
+        imageList.add(SlideModel(R.drawable.banner0, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner9, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner1, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner2, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner3, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner4, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner5, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner6, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner7, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner8, ScaleTypes.FIT))
+
+
+        val imageSlider = binding.imageSlider
+        imageSlider.setImageList(imageList)
+        imageSlider.setImageList(imageList, ScaleTypes.FIT)
+
+        imageSlider.setItemClickListener(object : ItemClickListener {
+            override fun doubleClick(position: Int) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onItemSelected(position: Int) {
+                // You can listen here.
+                val itemPosition = imageList[position]
+                val itemMessage = "Selected Image $position"
+                Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+
+
     }
 
     companion object {
