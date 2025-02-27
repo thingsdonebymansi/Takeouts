@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.denzcoskun.imageslider.constants.AnimationTypes
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
@@ -28,6 +29,8 @@ class HomeFragment : Fragment() {
     private var param2: String? = null
 
     private lateinit var binding: FragmentHomeBinding
+    private var imageList = ArrayList<SlideModel>() // Create image list
+    private var currentPosition = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +53,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val imageList = ArrayList<SlideModel>() // Create image list
+
         imageList.add(SlideModel(R.drawable.banner0, ScaleTypes.FIT))
         imageList.add(SlideModel(R.drawable.banner9, ScaleTypes.FIT))
         imageList.add(SlideModel(R.drawable.banner1, ScaleTypes.FIT))
@@ -66,6 +69,7 @@ class HomeFragment : Fragment() {
         val imageSlider = binding.imageSlider
         imageSlider.setImageList(imageList)
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
+        imageSlider.setSlideAnimation(AnimationTypes.TOSS)
 
         imageSlider.setItemClickListener(object : ItemClickListener {
             override fun doubleClick(position: Int) {
@@ -74,9 +78,12 @@ class HomeFragment : Fragment() {
 
             override fun onItemSelected(position: Int) {
                 // You can listen here.
-                val itemPosition = imageList[position]
+                currentPosition = position
                 val itemMessage = "Selected Image $position"
                 Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()
+
+
+
             }
 
         })
