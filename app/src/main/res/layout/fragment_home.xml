@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,16 +13,67 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/image_slider"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:iss_auto_cycle="true"
-            app:iss_period="2000"
             app:iss_delay="2000"
-            app:iss_text_align="CENTER"/>
+            app:iss_period="2000"
+            app:iss_text_align="CENTER" />
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tVPopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/shojumaru"
+        android:padding="8dp"
+        android:text="@string/tVPopular"
+        android:textAlignment="center"
+        android:textColor="@color/text_green"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tVViewMenu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cVBanner" />
+
+    <TextView
+        android:id="@+id/tVViewMenu"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/gradient_bg"
+        android:elevation="8dp"
+        android:fontFamily="@font/peralta"
+        android:padding="8dp"
+        android:text="@string/tVViewMenu"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tVPopular"
+        app:layout_constraintTop_toBottomOf="@+id/cVBanner" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rVFragmentHome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tVPopular" />
 </androidx.constraintlayout.widget.ConstraintLayout>

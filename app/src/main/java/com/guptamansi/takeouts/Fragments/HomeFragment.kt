@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.AnimationTypes
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
 import com.guptamansi.takeouts.R
+import com.guptamansi.takeouts.adapter.PopularAdapter
 import com.guptamansi.takeouts.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -87,6 +89,16 @@ class HomeFragment : Fragment() {
             }
 
         })
+
+        val foodName = listOf("Basil Pizza", "Noodle Bowl", "Fruit Platter", "Cupcakes", "Grilled Sandwich", "Strawberry Shake")
+        val priceOfFood = listOf("$10", "$8", "$10", "$5", "$12", "$7")
+        val imagesOfFood = listOf(R.drawable.basilpizza, R.drawable.noodlebowl, R.drawable.fruitplatter, R.drawable.cupcakes, R.drawable.grilledsandwich, R.drawable.strawberryshake)
+
+        val adapter = PopularAdapter(foodName, imagesOfFood, priceOfFood)
+
+        binding.rVFragmentHome.layoutManager = LinearLayoutManager(requireContext())
+        binding.rVFragmentHome.adapter = adapter
+
 
 
 
