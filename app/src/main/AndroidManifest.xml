@@ -11,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_takeout_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Takeouts"
+
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+
         tools:targetApi="31">
         <activity
             android:name=".ChooseLocationActivity"
@@ -37,6 +41,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+
+
     </application>
 
 </manifest>

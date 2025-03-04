@@ -29,6 +29,12 @@
     <string name="tVPopular">Popular Options</string>
     <string name="tVViewMenu">View Menu</string>
     <string name="tVAddToCart">Add to Cart</string>
+    <string name="tVFragmentBasket">Basket</string>
+    <string name="btnFragmentBasket">Proceed</string>
+    <string name="tVNameOfFoodInBasket">Item Name</string>
+    <string name="tVPriceOfFoodInBasket">Item Price</string>
+    <string name="tVNoOfFoodItemsInBasket">1</string>
+
 
 
 </resources>

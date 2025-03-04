@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.guptamansi.takeouts.R
+import com.guptamansi.takeouts.adapter.BasketAdapter
+import com.guptamansi.takeouts.databinding.FragmentBasketBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +25,8 @@ class BasketFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var binding: FragmentBasketBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,8 +39,24 @@ class BasketFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_basket, container, false)
+        binding = FragmentBasketBinding.inflate(inflater, container,false)
+
+
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val basketFoodName = listOf("Grilled Sandwich", "Veg Cheese Pizza", "Pancakes", "Veg Thaali", "Coconut Icecream", "Chocolate Sandesh", "Sugarcame Juice", "Kesar Rabdi", "Veg Dumplings", "Tomato Pizza")
+        val basketItemPrice = listOf("$10", "$15", "$12", "$20", "$10", "$15", "$12", "$20", "$10", "$15")
+        val basketItemImage = listOf(R.drawable.banner0, R.drawable.banner9, R.drawable.banner1, R.drawable.banner2, R.drawable.banner3, R.drawable.banner4, R.drawable.banner5, R.drawable.banner6, R.drawable.banner7, R.drawable.banner8)
+
+        val adapter = BasketAdapter(basketFoodName, basketItemPrice, basketItemImage)
+        binding.rVFragmentBasket.layoutManager = LinearLayoutManager(requireContext())
+        binding.rVFragmentBasket.adapter = adapter
+
     }
 
     companion object {

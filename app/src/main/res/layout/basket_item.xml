@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cVBasketItem"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ibtnMinus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/gradient_bg"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="@+id/tVNoOfFoodItemsInBasket"
+                app:layout_constraintEnd_toStartOf="@+id/tVNoOfFoodItemsInBasket"
+                app:layout_constraintTop_toTopOf="@+id/tVNoOfFoodItemsInBasket"
+                app:srcCompat="@drawable/minus"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/iVBasketItem"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                app:srcCompat="@drawable/banner0" />
+
+            <TextView
+                android:id="@+id/tVNameOfFoodInBasket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/amita_bold"
+                android:text="@string/tVNameOfFoodInBasket"
+                android:textColor="@color/text_green"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tVPriceOfFoodInBasket"
+                app:layout_constraintStart_toEndOf="@+id/iVBasketItem"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/tVPriceOfFoodInBasket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/amita_bold"
+                android:text="@string/tVPriceOfFoodInBasket"
+                android:textColor="@color/text_green"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iVBasketItem"
+                app:layout_constraintTop_toBottomOf="@+id/tVNameOfFoodInBasket" />
+
+            <TextView
+                android:id="@+id/tVNoOfFoodItemsInBasket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/amita_bold"
+                android:text="@string/tVNoOfFoodItemsInBasket"
+                android:textColor="@color/text_green"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ibtnPlus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/gradient_bg"
+                android:paddingStart="6dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="6dp"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="@+id/tVNoOfFoodItemsInBasket"
+                app:layout_constraintStart_toEndOf="@+id/tVNoOfFoodItemsInBasket"
+                app:layout_constraintTop_toTopOf="@+id/tVNoOfFoodItemsInBasket"
+                app:srcCompat="@drawable/plus"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/ibtnTrash"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="@+id/ibtnPlus"
+                app:layout_constraintStart_toStartOf="@+id/ibtnMinus"
+                app:layout_constraintTop_toBottomOf="@+id/tVNoOfFoodItemsInBasket"
+                app:srcCompat="@drawable/trash"
+                app:tint="@color/text_green" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

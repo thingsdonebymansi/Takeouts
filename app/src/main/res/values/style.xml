@@ -8,5 +8,6 @@
     </style>
     <style name="MyAutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
         <item name="android:popupBackground">@color/dark_green</item>
+        <item name="android:popupElevation">@null</item>
     </style>
 </resources>
