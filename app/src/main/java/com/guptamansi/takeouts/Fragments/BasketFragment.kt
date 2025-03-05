@@ -49,9 +49,9 @@ class BasketFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val basketFoodName = listOf("Grilled Sandwich", "Veg Cheese Pizza", "Pancakes", "Veg Thaali", "Coconut Icecream", "Chocolate Sandesh", "Sugarcame Juice", "Kesar Rabdi", "Veg Dumplings", "Tomato Pizza")
-        val basketItemPrice = listOf("$10", "$15", "$12", "$20", "$10", "$15", "$12", "$20", "$10", "$15")
-        val basketItemImage = listOf(R.drawable.banner0, R.drawable.banner9, R.drawable.banner1, R.drawable.banner2, R.drawable.banner3, R.drawable.banner4, R.drawable.banner5, R.drawable.banner6, R.drawable.banner7, R.drawable.banner8)
+        val basketFoodName = mutableListOf("Grilled Sandwich", "Veg Cheese Pizza", "Pancakes", "Veg Thaali", "Coconut Icecream", "Chocolate Sandesh", "Sugarcame Juice", "Kesar Rabdi", "Veg Dumplings", "Tomato Pizza")
+        val basketItemPrice = mutableListOf("$10", "$15", "$12", "$20", "$10", "$15", "$12", "$20", "$10", "$15")
+        val basketItemImage = mutableListOf(R.drawable.banner0, R.drawable.banner9, R.drawable.banner1, R.drawable.banner2, R.drawable.banner3, R.drawable.banner4, R.drawable.banner5, R.drawable.banner6, R.drawable.banner7, R.drawable.banner8)
 
         val adapter = BasketAdapter(basketFoodName, basketItemPrice, basketItemImage)
         binding.rVFragmentBasket.layoutManager = LinearLayoutManager(requireContext())
