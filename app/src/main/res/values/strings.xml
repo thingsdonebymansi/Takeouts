@@ -34,7 +34,7 @@
     <string name="tVNameOfFoodInBasket">Item Name</string>
     <string name="tVPriceOfFoodInBasket">Item Price</string>
     <string name="tVNoOfFoodItemsInBasket">1</string>
-
+    <string name="tVFragmentBottomSheet">Menu</string>
 
 
 </resources>
