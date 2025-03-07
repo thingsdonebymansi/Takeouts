@@ -21,7 +21,7 @@
             android:padding="5dp"
             android:scaleType="centerCrop"
             android:src="@drawable/rewind"
-            android:tint="@color/text_green" />
+            app:tint="@color/text_green" />
 
         <TextView
             android:id="@+id/tVFragmentBottomSheet"
